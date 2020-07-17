@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#content-box {
+  display: flex;
+  flex-direction: row;
+  width: 98.3vw;
+  height: 100vh;
+  background: rgb(255, 152, 212);
+}
+.you {
+  background: rgb(18, 223, 255);
+}
+
+.alisha {
+  background: rgb(251, 255, 36);
+}
+.alisha,
+.you {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#circleA,
+#circleU {
+  border-radius: 50%;
+  width: 15vmax;
+  display: inline-block;
+  height: 15vmax;
+  background: rgb(18, 223, 255) url(IMAGES/new.png);
+  background-position: 0.1vmax 0.1vmax;
+  background-size: cover;
+  position: relative;
+  top: 20%;
+}
+#circleU {
+  background: rgb(251, 255, 36) url(IMAGES/you.png);
+  background-position: -0.2vmax -0.1vmax;
+  background-size: cover;
+}
+#textU {
+  width: 49.1vw;
+  height: 30vh;
+  background: rgb(251, 255, 36);
+  position: relative;
+  bottom: 60vh;
+  left: 0vw;
+  box-sizing: border-box;
+  border-radius: 5%;
+}
+#textA {
+  background: rgb(18, 223, 255);
+  width: 49.3vw;
+  height: 30vh;
+  position: relative;
+  bottom: 30vh;
+  left: 49.1vw;
+  box-sizing: border-box;
+  border-radius: 5%;
+}
+#ha,
+#hu {
+  font-size: 17px;
+  padding: 7px;
+}
+#btn {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  top: -20vw;
+  left: 40vw;
+  border-radius: 50%;
+  background: orangered;
+  color: whitesmoke;
+  border: 2px solid white;
+  font-size: 1em;
+}
+
+#btn:focus {
+  background: orange;
+  outline: none;
+}
+@media screen and (min-width: 1000px) {
+  #btn {
+    width: 12vw;
+    height: 12vw;
+    top: -12vw;
+    left: 43vw;
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  #btn {
+    font-size: 2.7vw;
+  }
+}
