@@ -2,9 +2,16 @@
 const btn = document.querySelector("#btn");
 const contentAlisha = document.querySelector("#ha");
 const contentU = document.querySelector("#hu");
+const HELP = document.querySelector(".HELP");
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
+var transcript;
+var search;
+// HELP.addEventListener('click',() =>
+
+// )
+//ARRAYS
 const personality = [
   "nothing works",
   "Alisha here, how can i help you?",
@@ -21,7 +28,7 @@ const canyou = [
   "b",
   "Sorry boss, I can't help you😞",
   "Sorry boss, I can't do that😞",
-  "sorry but I can't do pysical activities😞",
+  "sorry but I can't do physical activities😞",
 ];
 const knowotherai = [
   "c",
@@ -167,11 +174,11 @@ recognition.onstart = () => {
 };
 recognition.onresult = (e) => {
   const current = event.resultIndex;
-  const transcript = event.results[current][0].transcript;
+  transcript = event.results[current][0].transcript;
   console.log(e);
   contentU.innerHTML = transcript.toUpperCase();
-  btn.innerHTML = "TALK";
   speakItLoud(transcript);
+  btn.innerHTML = "TALK";
 };
 // event listeners
 btn.addEventListener("click", () => {
@@ -186,7 +193,9 @@ function speakItLoud(txt) {
     txt.includes("hey") ||
     txt.includes("hi") ||
     txt.includes("hey Alisha") ||
-    txt.includes("hi Alisha")
+    txt.includes("hi Alisha") ||
+    txt.includes("hello Alisha") ||
+    txt.includes("hello")
   ) {
     var res = personality[Math.ceil(Math.random() * 4)];
     saying.text = res;
@@ -376,7 +385,7 @@ function speakItLoud(txt) {
   } else if (
     txt.includes("what are you afraid of") ||
     txt.includes("are you afraid of somthing") ||
-    txt.includes("which things are you scared of")
+    txt.includes("which things are you afraid of")
   ) {
     var res21 = afraid[Math.ceil(Math.random() * 2)];
     saying.text = res21;
@@ -432,7 +441,7 @@ function speakItLoud(txt) {
     saying.text = res27;
     contentAlisha.innerHTML = res27.toUpperCase();
   } else if (
-    txt.includes("do you lobe me ") ||
+    txt.includes("do you love me ") ||
     txt.includes("do you like me")
   ) {
     var res28 = loveme[Math.ceil(Math.random() * 2)];
@@ -455,9 +464,11 @@ function speakItLoud(txt) {
     saying.text = res30;
     contentAlisha.innerHTML = res30.toUpperCase();
   } else {
-    saying.text = "I cant understand what you just said";
+    var demo = "i cant understand , try saying something different ";
+    saying.text = demo;
+    search = transcript;
+    contentAlisha.innerHTML = demo.toUpperCase();
   }
-  btn.innerHTML = "SPEAKING";
   saying.volume = 1;
   saying.pitch = 1;
   saying.rate = 1;

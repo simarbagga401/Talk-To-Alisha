@@ -8,9 +8,27 @@
 #content-box {
   display: flex;
   flex-direction: row;
-  width: 98.3vw;
+  width: 100vw;
   height: 100vh;
   background: rgb(255, 152, 212);
+}
+.HELP {
+  border-radius: 50%;
+  height: 7vmax;
+  width: 7vmax;
+  color: white;
+  background: orangered;
+  text-align: center;
+  line-height: 7vmax;
+  font-size: 4vmax;
+  border: 2px solid whitesmoke;
+  position: relative;
+  left: 24vw;
+  bottom: 18vh;
+}
+.HELP:focus {
+  background: orange;
+  outline: none;
 }
 .you {
   background: rgb(18, 223, 255);
@@ -45,7 +63,7 @@
   background-size: cover;
 }
 #textU {
-  width: 49.1vw;
+  width: 50vw;
   height: 30vh;
   background: rgb(251, 255, 36);
   position: relative;
@@ -56,13 +74,14 @@
 }
 #textA {
   background: rgb(18, 223, 255);
-  width: 49.3vw;
+  width: 50vw;
   height: 30vh;
   position: relative;
   bottom: 30vh;
-  left: 49.1vw;
+  left: 50vw;
   box-sizing: border-box;
   border-radius: 5%;
+  overflow-x: hidden;
 }
 #ha,
 #hu {
@@ -74,13 +93,14 @@
   width: 20vw;
   height: 20vw;
   top: -20vw;
-  left: 40vw;
+  left: 41vw;
   border-radius: 50%;
   background: orangered;
   color: whitesmoke;
   border: 2px solid white;
-  font-size: 1em;
+  font-size: 3vmax;
 }
+
 
 #btn:focus {
   background: orange;
@@ -91,7 +111,7 @@
     width: 12vw;
     height: 12vw;
     top: -12vw;
-    left: 43vw;
+    left: 44vw;
     font-size: 2vw;
   }
 }
