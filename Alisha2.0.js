@@ -3,14 +3,26 @@ const btn = document.querySelector("#btn");
 const contentAlisha = document.querySelector("#ha");
 const contentU = document.querySelector("#hu");
 const HELP = document.querySelector(".HELP");
+const help_content = document.querySelector("#help_content");
+const COOL = document.querySelector("#help_btn");
+const you = document.querySelector("#you");
+const alisha = document.querySelector("#alisha");
+
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 var transcript;
 var search;
-// HELP.addEventListener('click',() =>
+HELP.addEventListener("click", toogle);
+COOL.addEventListener("click", toogle);
+function toogle() {
+  help_content.classList.toggle("active");
+  contentU.classList.toggle("blur");
+  contentAlisha.classList.toggle("blur");
+  you.classList.toggle("blur");
+  alisha.classList.toggle("blur");
+}
 
-// )
 //ARRAYS
 const personality = [
   "nothing works",

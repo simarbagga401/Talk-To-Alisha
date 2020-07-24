@@ -12,6 +12,10 @@
   height: 100vh;
   background: rgb(255, 152, 212);
 }
+body {
+  width: 100vw;
+  height: 100vh;
+}
 .HELP {
   border-radius: 50%;
   height: 7vmax;
@@ -30,15 +34,15 @@
   background: orange;
   outline: none;
 }
-.you {
+#you {
   background: rgb(18, 223, 255);
 }
 
-.alisha {
+#alisha {
   background: rgb(251, 255, 36);
 }
-.alisha,
-.you {
+#alisha,
+#you {
   width: 50vw;
   height: 100vh;
   display: flex;
@@ -101,10 +105,65 @@
   font-size: 3vmax;
 }
 
-
 #btn:focus {
   background: orange;
   outline: none;
+}
+#help_content {
+  height: 90vh;
+  width: 90vw;
+  background-color: #ccc;
+  z-index: 20;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  padding: 10px;
+  border-radius: 15px;
+  overflow-x: hidden;
+  font-size: large;
+  user-select: none;
+  display: none;
+}
+#help_content.active {
+  height: 90vh;
+  width: 90vw;
+  background-color: #ccc;
+  z-index: 20;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  padding: 10px;
+  border-radius: 15px;
+  overflow-x: hidden;
+  font-size: large;
+  user-select: none;
+  display: inline-block;
+}
+
+#help_btn {
+  width: 80px;
+  height: 50px;
+  background: orangered;
+  color: whitesmoke;
+  border: 2px solid white;
+  font-size: 1rem;
+  display: inline-block;
+  position: fixed;
+  bottom: 7vh;
+  right: 7vw;
+}
+#help_btn:focus {
+  background: orange;
+  outline: none;
+}
+#help_btn:focus .help_content {
+  display: inline-block;
+}
+#alisha.blur,
+#you.blur,
+#hu.blur,
+#ha.blur {
+  filter: blur(50px);
 }
 @media screen and (min-width: 1000px) {
   #btn {
